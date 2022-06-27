@@ -1,7 +1,8 @@
 #bubble py V.1.0
 
 import os
-from selenium import webdriver
+from pty import slave_open
+import webbrowser
 '''
 import subprocesss
 '''
@@ -104,6 +105,7 @@ while re=="y":
                   npw = input("new password>>")
                   newpassword.write(npw)
                   newpassword.close()
+                  print("mdp modifié !")
     elif cmd=="info":
         print("Bubble py version beta 1.0")
         print("©Bubble py 2021")
@@ -117,7 +119,12 @@ while re=="y":
         if maj.read() == "y":
             print("une mise à jour est disponible")
             print("voulez vous l'installer (y/n)")
-            input
+            yn=input("yn>>>")
+            if yn=="y":
+                from data.maj.maj import DoMaj
+                DoMaj()
+        else :
+            print("occune mise à jour n'est dissponile.")
         print("")
     elif cmd=="restart":
         os.system("restart.py")
@@ -125,8 +132,7 @@ while re=="y":
     elif cmd=="python info":
         print("quelques infos sur python:")
     elif cmd=="help":
-        driver = webdriver.Firefox()
-        driver.get("http://google.co.uk")
+        import webbrowser
     else :
         '''if os.path.exists("newcmd/new.py") == True:
             os.'''
