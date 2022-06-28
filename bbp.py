@@ -53,6 +53,7 @@ fichier.close()
 #debut du programe
 print("bubble py BÊTA")
 print("bonjour "+name)
+namef.close()
 while re=="y":
     cmd = input(">>>")
     if cmd == "reset":
