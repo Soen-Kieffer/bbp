@@ -11,4 +11,4 @@ For settings type
 ```
 settings
 ```
-Thanks you for download 😊😊
+Thanks you
