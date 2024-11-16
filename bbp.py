@@ -88,7 +88,7 @@ while re=="y":
         quit()
     elif cmd =="pycmd":
         pycmd = input("py>>>")
-        pycmd
+        exec(pycmd)
     elif cmd =="script":
         print("")
     elif cmd =="settings":
